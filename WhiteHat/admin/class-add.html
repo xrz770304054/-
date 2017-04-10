@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>学员信息</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<script type="text/javascript" src="../js/jquery-1.4a2.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        /* 初始化数据 */
+        var i = 0;
+        var inputObj = $('.class-opt input').get();
+        var selectObj = $('.class-opt select').get();
+        var inputOps = getOps(inputObj);
+        var selectOps = getOps(selectObj);
+        $('.class-opt input').bind('blur',function () {
+            var i = $(this).parent().find('input').index(this);
+            inputOps[i] = $(this).val();
+        });
+        $('.class-opt select').bind('blur',function () {
+            var i = $(this).parent().find('select').index(this);
+            selectOps[i] = $(this).val();
+        });
+        // 获取默认参数
+        function getOps(arr) {
+            var ops = [];
+            for(var i=0,len=arr.length; i<len; i++) {
+                ops[i] = arr[i].value;
+            }
+            return ops;
+        }
+        // 定义插入行
+        function createStr(n,val,arr) {
+            return '<tr><td>'+n+'</td><td><input type="text" /></td><td>'+selectOps[1]+'</td><td>'+selectOps[2]+'</td><td>'+selectOps[3]+'</td><td>'+selectOps[4]+'</td><td><input type="text" /></td><td>'+selectOps[0]+'</td><td>'+inputOps[0]+'</td></tr>';
+        }
+        // 点击创建班级
+        $('.class-opt span.c').bind('click',function () {
+            if(i < 10) {
+                i++;
+                var strRow = createStr(i,selectOps,inputOps);
+                inputOps[1]++;
+                $('.class table').append(strRow);
+                $('tr:last :text:first').focus();
+            }
+        });
+        // 点击保存班级
+        $('.class-opt span.s').bind('click',function () {
+                $('tr').not('tr:first').find('td').animate({opacity:0,border:'0'},500)
+        });
+    });
+</script>
+
+<style type="text/css">
+</style>
+</head>
+    <body>
+        <div id="class-add">
+            <div class="titlebar"><span>查看班级</span><a href="">WhiteHat管理中心 - 创建班级</a></div>
+            <div class="class-opt">
+                <form action="" method="post">
+                    <select>
+                        <option>请选择学科</option>
+                        <option>PHP学科</option>
+                        <option>JAVA学科</option>
+                        <option>.NET学科</option>
+                        <option>网页平面</option>
+                    </select>
+                    <select>
+                        <option>请选择班主任</option>
+                        <option>石玉月</option>
+                        <option>赵玉川</option>
+                        <option>陈长宏</option>
+                        <option>路会</option>
+                    </select>
+                    <select>
+                        <option>请选择讲师</option>
+                        <option>韩忠康</option>
+                        <option>赵剑宇</option>
+                        <option>冯佳</option>
+                        <option>张鹏</option>
+                    </select>
+                    <select>
+                        <option>请选择上课教室</option>
+                        <option>金燕龙108</option>
+                        <option>金燕龙205</option>
+                        <option>金燕龙210</option>
+                        <option>金燕龙211</option>
+                    </select>
+                    <select>
+                        <option>请选择开班教室</option>
+                        <option>金燕龙205</option>
+                        <option>金燕龙210</option>
+                        <option>金燕龙211</option>
+                    </select>
+                    开班日期：<input type="text" value="2013-4-22" />
+                </form>
+                <p><span class="c">创建</span><span class="s">保存</span></p>
+            </div><!-- add-opt -->
+            <div class="class">
+                <table width="100%">
+                    <tr><td>序号</td><td>班级名称</td><td>班主任</td><td>讲师</td><td>上课教室</td><td>开班教室</td><td>作息时间</td><td>所属学科</td><td>开班日期</td></tr>
+                </table>
+            </div><!-- add -->
+        </div><!-- stu-add -->
+    </body>
+</html>

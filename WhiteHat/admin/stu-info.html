@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>学员信息</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<script type="text/javascript" src="../js/jquery-1.4a2.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.yd').bind('change',function () {
+            $('<div><div>').appendTo($('body')).addClass('action-bg');
+            $('.action-bg').css('filter','alpha(opacity=70)');
+			$('.action-bg').css('-moz-opacity','50');
+            $('<div></div>').appendTo($('body')).addClass('action-form');
+            $('<form></form>').appendTo($('.action-form'));
+        });
+    });
+</script>
+
+<style type="text/css">
+</style>
+</head>
+    <body>
+        <div id="stu-info">
+            <div class="titlebar"><span>添加学员</span><a href="">WhiteHat管理中心 - 学员信息</a></div>
+            <div class="search">
+                <select>
+                    <option>所在班级</option>
+                </select>
+                <select>
+                    <option>所学专业</option>
+                </select>
+                <select>
+                    <option>学历</option>
+                </select>
+                <input class="sub" type="text" value="关键字" /><input class="btn" type="submit" value="搜索" />
+            </div>
+            <div class="stu-list">
+                <table width="100%">
+                    <tr class="tit"><td>序号</td><td>姓名</td><td>性别</td><td>学历</td><td>所学专业</td><td>毕业院校</td><td>电话</td><td>邮箱</td><td>所属班级</td><td>籍贯</td><td>在京住址</td><td>信息渠道</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                    <tr class="hov"><td><input type="checkbox" class="chk" />1</td><td>赵玉川</td><td>男</td><td>大专</td><td>国际贸易</td><td>天津工业大学</td><td>15901256171</td><td>zyc521008@sina.com</td><td>PHP 0330 基础班</td><td>河北省</td><td>八维计算机学校</td><td>百度搜索</td></tr>
+                </table>
+            </div><!-- stu-list -->
+            <div class="oper">
+                <form action="" method="post">
+                    <select class="yd">
+                        <option>选择异动类型</option>
+                        <option>重读</option>
+                        <option>转班</option>
+                        <option>退学</option>
+                    </select>
+                    <select>
+                        <option class="cz">选择操作类型</option>
+                        <option>升级</option>
+                        <option>就业</option>
+                        <option>锁定</option>
+                        <option>编辑</option>
+                    </select>
+                </form>
+            </div>
+        </div><!-- stu-info -->
+    </body>
+</html>

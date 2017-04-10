@@ -1,0 +1,94 @@
+/* 初始化样式 */
+* {margin:0;padding:0}
+body {font-family:"微软雅黑",Arial,"宋体";background:#F9F9F9;color:#676764;}
+ul {list-style-type:none;}
+a {text-decoration:none;color:#676764;}
+a:hover {color:#000000;}
+.r {float:right;}
+.l {float:left;}
+img {border:none;}
+table {border-collapse:collapse;}
+input {font-family:"微软雅黑",Arial,"宋体";}
+#stu-add .stu td .dis {background-color:#F9F9F9;border:none;text-align:center;}
+/* top.html */
+#header {width:100%;height:60px;padding-top:10px;background-color:#F1F1F1;border-bottom:1px solid #CCCCCC;}
+#header .logo {margin:0 30px;}
+
+/* left.html */
+#sidebar {width:190px;}
+#sidebar .menu>ul {margin:10px;background-color:#FFFFFF;}
+#sidebar .menu .menu-list ul {padding:5px 20px;line-height:25px;font-size:15px;}
+#sidebar .menu .menu-list ul li:hover {color:#000000;cursor:pointer;}
+span.menu-title {display:block;height:30px;background-color:#F3F3F3;font-size:16px;margin:2px 0;cursor:pointer;border:1px solid #E0E0E0;border-radius:3px;padding-left:10px;line-height:30px;}
+
+/* right.html */
+#main {}
+
+/* stu-info.html */
+#stu-info {padding:20px;width:1101px;}
+.titlebar {height:30px;border-bottom:1px solid #CCCCCC;padding-left:20px;letter-spacing:1px;}
+.titlebar span {float:right;margin-right:30px;}
+.search {height:40px;border-bottom:1px solid #CCCCCC;line-height:40px;}
+.search select {width:160px;margin-left:20px;height:23px;padding:1px;color:#676764;font-family:"微软雅黑",Arial,"宋体";}
+.search input.sub {margin-left:20px;margin-right:5px;color:#CCCCCC;height:18px;padding:1px;}
+.search input.btn {width:70px;height:23px;margin-left:10px;background-color:#F0F0F0;border:1px solid #CCCCCC;border-radius:3px;font-size:13px;color:#676764;letter-spacing:1px;cursor:pointer;}
+#stu-info .stu-list {padding:10px;}
+#stu-info .stu-list table {border:1px solid #CCCCCC;width:100%;}
+#stu-info .stu-list td {border:1px solid #CCCCCC;text-align:center;height:30px;font-size:13px;letter-spacing:1px;border-bottom:1px solid #CCCCCC;}
+#stu-info .stu-list tr.hov:hover {background-color:#FFFFFF;}
+input.chk {height:16px;width:auto;margin-right:8px;vertical-align:middle;}
+.oper select {width:110px;margin-left:20px;height:23px;padding:1px;color:#676764;font-family:"微软雅黑",Arial,"宋体";margin-top:10px;}
+.action-bg {position:absolute;width:100%;height:100%;top:0;z-index:10;background:#FFFFFF;opacity:0.7;cursor:pointer;}
+.action-form {position:absolute;width:400px;height:300px;top:50%;left:50%;margin-left:-200px;margin-top:-150px;z-index:15;border:#CCC solid 1px;background:#F9F9F9;display:block;}
+
+/* stu-add.html */
+#stu-add {padding:20px;width:1101px;}
+#stu-add .stu-opt {height:40px;border-bottom:1px solid #CCCCCC;line-height:40px;font-size:15px;}
+#stu-add .stu-opt form {margin-left:20px;float:left;}
+#stu-add .stu-opt input {height:18px;padding:1px;margin-right:20px;color:#676764;}
+#stu-add .stu-opt select {width:160px;margin-right:20px;height:23px;padding:1px;color:#676764;font-family:"微软雅黑",Arial,"宋体";}
+#stu-add .stu {padding:10px;font-size:13px;}
+#stu-add .stu table {border:1px solid #CCCCCC;width:100%;}
+#stu-add .stu td {border:1px solid #CCCCCC;text-align:center;height:30px;border-bottom:1px solid #CCCCCC;}
+#stu-add .stu td input {width:130px;height:18px;padding:1px;border:1px solid #CCCCCC;color:#676764;}
+#stu-add .stu-opt p {float:right;width:245px;margin-top:8px;}
+#stu-add .stu-opt span {background-color:#F0F0F0;display:block;float:left;width:70px;height:23px;margin-right:10px;line-height:22px;text-align:center;border:1px solid #CCCCCC;cursor:pointer; border-radius:3px;letter-spacing:2px;}
+
+/* class-add.html */
+#class-add {padding:20px;width:1101px;}
+#class-add .class-opt {height:40px;border-bottom:1px solid #CCCCCC;line-height:40px;font-size:15px;}
+#class-add .class-opt form {margin-left:20px;float:left;}
+#class-add .class-opt input {height:18px;width:120px;padding:1px;border:1px solid #CCCCCC;margin-right:15px;color:#676764;}
+#class-add .class-opt select {width:120px;margin-right:15px;height:23px;padding:1px;color:#676764;font-family:"微软雅黑",Arial,"宋体";}
+#class-add .class {padding:10px;font-size:13px;}
+#class-add .class td {text-align:center;height:30px;border-bottom:1px solid #CCCCCC;}
+#class-add .class td input {height:18px;padding:1px;border:1px solid #CCCCCC;color:#676764;}
+#class-add .class-opt p {float:right;width:169px;margin-top:8px;}
+#class-add .class-opt span {background-color:#F0F0F0;display:block;float:left;width:70px;height:23px;margin-right:10px;line-height:22px;text-align:center;border:1px solid #CCCCCC;cursor:pointer; border-radius:3px;letter-spacing:2px;}
+
+/* class-list.html */
+#class-info {padding:20px;width:1101px;}
+#class-info .class-list {padding:10px;}
+#class-info .class-list td {text-align:center;height:30px;font-size:13px;letter-spacing:1px;border-bottom:1px solid #CCCCCC;}
+#class-info .class-list tr.hov:hover {background-color:#FFFFFF;}
+
+/* check-in.html */
+#check-in {padding:20px;width:1101px;}
+
+/* check-list.html */
+#check-list {padding:20px;width:1101px;}
+#check-list .date {height:40px;border-bottom:1px solid #CCCCCC;line-height:40px;font-size:15px;}
+#check-list .date span {margin-left:20px;}
+#check-list .sheet {padding:10px;font-size:13px;}
+#check-list .sheet td {text-align:center;height:30px;border-bottom:1px solid #CCCCCC;}
+#check-list .sheet tr.hov:hover {background-color:#FFFFFF;}
+
+/* test-add.html */
+#test-add {padding:20px;width:1101px;}
+
+/* test-list.html */
+#test-list {padding:20px;width:1101px;}
+
+/* 底部样式 */
+#footer {width:100%;height:35px;background-color:#F1F1F1;border-top:1px solid #CCCCCC;}
+#footer p {line-height:35px;font-size:9pt;color:#333333;text-align:center;}

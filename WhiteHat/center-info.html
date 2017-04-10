@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>白帽子-首页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="Favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<script type="text/javascript" src="js/jquery-1.4a2.min.js"></script>
+<script type="text/javascript">
+    // 显示/隐藏
+    $(function () {
+        $('.my-index').find('li').click(function () {
+            $('.my-index').find('li').css('border-bottom','1px solid #CCCCCC');
+            $(this).css('border-bottom','1px solid #F9F9F9');
+            var key = $('.my-index').find('li').index(this);
+            $('.ul li').css('display','none');
+            $('.ul li').get(key).style.display = 'block';
+        });
+    });
+</script>
+
+<style type="text/css">
+
+</style>
+</head>
+    <body>
+        <div id="cont-header">
+            <div class="logo">
+                <img src="./images/logo.png" height="30" />
+                <ul>
+                    <li><a href="#">个人中心</a></li>
+                    <li><a href="#">我要提问</a></li>
+                    <li><a href="index.html">返回首页</a></li>
+                </ul>
+            </div>
+        </div><!-- header -->
+        <div id="container">
+            <div class="content">
+                <div id="sidebar">
+                    <div class="count-mes c"></div>
+                    <div class="question-list c">
+                        <ul>
+                            <li><a href="center-index.html">我的主页</a></li>
+                            <li><a href="center-info.html">个人信息</a></li>
+                            <li><a href="#">我的课程</a></li>
+                            <li><a href="#">我的考勤</a></li>
+                            <li><a href="#">我的提问</a></li>
+                            <li><a href="#">我的好友</a></li>
+                            <li><a href="#">查看留言</a></li>
+                            <li><a href="#">我的成绩</a></li>
+                            <li><a href="#">我的笔记</a></li>
+                            <li><a href="#">教师测评</a></li>
+                            <li><a href="#">安全退出</a></li>
+                        </ul>
+                    </div><!-- question-list -->
+                </div><!-- sidebar -->
+                <div id="main">
+                    <div class="main-cont t">
+                        <div class="top-title">
+                            <h4>我的资料</h4>
+                        </div>
+                        <div class="my-index">
+                            <ul>
+                                <li class="s">个人资料</li>
+                                <li>更新头像</li>
+                                <li>修改密码</li>
+                            </ul>
+                        </div><!-- my-index -->
+                        <ul class="ul">
+                            <li>
+                                <div class="myform">
+                                    <form action="" method="post">
+                                        <table width="100%">
+                                            <tr><td>姓名：</td><td>WhiteHat</td><td>所属班级：</td><td>PHP 0330 基础班</td></tr>
+                                            <tr><td>生日：</td><td><input type="text" /></td><td>性别：</td><td><select><option>帅哥</option><option>美女</option></select></td></tr>
+                                            <tr><td>手机号：</td><td><input type="text" /></td><td>QQ号：</td><td><input type="text" /></td></tr>
+                                            <tr><td>籍贯：</td><td><input type="text" /></td><td>学历：</td><td><select><option>本科</option><option>大专</option><option>高中</option><option>初中</option><option>小学</option><option>其它</option></select></td></tr>
+                                            <tr><td>毕业学校：</td><td><input type="text" /></td><td>专业：</td><td><input type="text" /></td></tr>
+                                            <tr><td>在京住址：</td><td colspan="3"><input type="text" class="addr" /></td></tr>
+                                            <tr><td colspan="4"><span>何种方式了解传智播客： </span>视频<input class="chk" type="checkbox" />百度<input class="chk" type="checkbox" />介绍<input class="chk" type="checkbox" />其它<input class="chk" type="checkbox" /></td></tr>
+                                            <tr><td>我的目标：</td><td colspan="3"><textarea></textarea></td></tr>
+                                            <tr><td>&nbsp;</td><td colspan="3"><input class="btn" type="submit" value="保存" /></td></tr>
+                                        </table>
+                                    </form>
+                                </div><!-- myform -->
+                            </li>
+                            <li style="display:none;">
+                                <div class="myhead" >
+                                    <h4>修改当前的头像</h4>
+                                    <div class="photos">
+                                        <div class="big"><img src="./images/linux.jpg" /></div>
+                                        <div class="mediu"><img src="./images/linux.jpg" /></div>
+                                        <div class="small"><img src="./images/linux.jpg" /></div>
+                                        <div class="upload">
+                                            <p>从你的电脑中选择你喜欢的图片: </p>
+                                            <form>
+                                                <input type="file" name="" /><br />
+                                                <span>你可以上传JPG、JPEG、GIF、PNG文件</span><br />
+                                                <input type="submit" class="sub" value="保存" />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- myhead -->
+                            </li>
+                            <li style="display:none;">
+                                <div class="mypwd">
+                                    <form>
+                                        <table>
+                                            <tr><td>原始密码：</td><td><input type="text" /></td></tr>
+                                            <tr><td>新密码：</td><td><input type="text" /></td></tr>
+                                            <tr><td>确认密码：</td><td><input type="text" /></td></tr>
+                                            <tr><td colspan="2"><input type="submit" class="sub" value="保存" /></td></tr>
+                                        </table>
+                                    </form>
+                                </div><!-- mypwd-->
+                            </li>
+                        <ul>
+                    </div><!-- main-cont -->
+                </div><!-- main -->
+            </div><!-- content -->
+        </div><!-- container -->
+        <div id="footer"><p>本程序为测试使用，不得用于商业用途。版权所有 <span><a style="color:blue;text-decoration:none;" href="javascript:void(0);">白帽子测试系统V1.0</a></span></p></div>
+    </body>
+</html>

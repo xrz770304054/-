@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>学员信息</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<link rel="stylesheet" type="text/css" href="../js/calendar/calendar.css" />
+<script type="text/javascript" src="../js/calendar/calendar.js"></script>
+<script type="text/javascript" src="../js/jquery-1.4a2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.form.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var i = 0;
+        var limit = $('input[name=num]').val();
+        $('input[name=num]').bind('blur',function () {limit = $(this).val();});
+        // 定义插入行
+        function createStr(n,arr) {
+            var str = '<tr>';
+            str += '<td>'+n+'</td>';
+            str += '<td><input type="text" /></td>';
+            str += '<td><input type="text" value="'+arr[0]+'" /></td>';
+            str += '<td><input type="text" value="'+arr[1]+'" /></td>';
+            str += '<td><input type="text" value="'+arr[2]+'" /></td>';
+            str += '<td><input type="text" /></td>';
+            str += '<td><input type="text" /></td>';
+            str += '<td><a href="javascript:void(0);">修改</a></td>';
+            return str;
+        }
+        // 禁用已插入的行
+        function disRow() {$('tr:last').prev().find('input').each(function () {$(this).attr('disabled',true).addClass('dis');});}
+        // 点击创建行
+        $('.stu-opt span.c').bind('click',function () {
+            var formOps = $('form:first *').fieldValue();
+            if(i < limit) {
+                i++;
+                var strRow = createStr(i,formOps);
+                formOps[2]++;
+                $('.stu table').append(strRow);
+                $('tr:last :text:first').focus();
+                if($('.stu table tr').size() > 2) {
+                    disRow();
+                }
+            }
+        });
+        // 回车创建行
+        $('.stu table').bind('keyup',function (ev) {
+            var formOps = $('form:first *').fieldValue();
+            if(ev.keyCode == 13 && i < limit) {
+                i++;
+                var strRow = createStr(i,formOps);
+                formOps[2]++;
+                $('.stu table').append(strRow);
+                formOps[2]++;
+                $('tr:last :text:first').focus();
+                disRow();
+            }
+        });
+        // 点击修改
+        $('.stu a').bind('click',function () {
+            //var i = $('.stu table').find('a').index(this);
+            alert(10);
+        });
+    });
+</script>
+
+<style type="text/css">
+</style>
+</head>
+    <body>
+        <div id="stu-add">
+            <div class="titlebar"><span>学员信息</span><a href="">WhiteHat管理中心 - 添加学员</a></div>
+            <div class="stu-opt">
+                <form action="" method="post">
+                    <select name="cla">
+                        <option>请选择班级</option>
+                        <option>PHP 0330 基础班</option>
+                    </select>
+                    默认密码：<input name="pwd" type="text" value="111111" />
+                    起始学号：<input name="sno" type="text" value="30000" />
+                    添加数量：<input name="num" style="width:40px;" type="text" value="10" id="cal" onclick="showCalendar(cal, '%Y-%m-%d', '12', false, 'cal')" />
+                    <!--
+                    <input type="button" class="button" value="选择" onclick="return showCalendar('promote_start_date', '%Y-%m-%d', false, false, 'selbtn1');" id="selbtn1" name="selbtn1">
+                    -->
+                </form>
+                <p><span class="c">创建</span><span>保存</span></p>
+            </div><!-- add-opt -->
+            <div class="stu">
+                <form>
+                    <table>
+                        <tr><td width="40">序号</td><td width="150">姓名</td><td width="150">所属班级</td><td width="150">初始密码</td><td width="150">学号</td><td width="150">交费情况</td><td width="150">咨询老师</td><td width="60">操作</td></tr>
+                    </table>
+                </form>
+            </div><!-- stu -->
+        </div><!-- stu-opt -->
+    </body>
+</html>
